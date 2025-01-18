@@ -8,7 +8,7 @@
   <Triggers>
     <SessionStateChangeTrigger>
       <Repetition>
-        <Interval>PT1M</Interval>
+        <Interval>PT5M</Interval>
         <StopAtDurationEnd>false</StopAtDurationEnd>
       </Repetition>
       <Enabled>true</Enabled>
