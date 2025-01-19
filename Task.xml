@@ -17,7 +17,6 @@
   </Triggers>
   <Principals>
     <Principal id="Author">
-      <UserId></UserId> <!-- Leave UserId empty to apply to any user -->
       <LogonType>InteractiveToken</LogonType>
       <RunLevel>HighestAvailable</RunLevel>
     </Principal>
