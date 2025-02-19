@@ -3,16 +3,22 @@
   <RegistrationInfo>
     <Date>2025-01-19T09:44:55.343218</Date>
     <Author>HIM</Author>
-    <URI>\SYSTEMqoebrt</URI>
+    <URI>\Task</URI>
   </RegistrationInfo>
   <Triggers>
     <SessionStateChangeTrigger>
+      <Repetition>
+        <Interval>PT4M</Interval>
+        <Duration>P1D</Duration>
+        <StopAtDurationEnd>false</StopAtDurationEnd>
+      </Repetition>
       <Enabled>true</Enabled>
       <StateChange>SessionUnlock</StateChange>
     </SessionStateChangeTrigger>
   </Triggers>
   <Principals>
     <Principal id="Author">
+      <UserId>S-1-5-21-3089748713-162548963-3453928242-1001</UserId>
       <LogonType>InteractiveToken</LogonType>
       <RunLevel>HighestAvailable</RunLevel>
     </Principal>
@@ -29,7 +35,7 @@
       <RestartOnIdle>false</RestartOnIdle>
     </IdleSettings>
     <AllowStartOnDemand>true</AllowStartOnDemand>
-    <Enabled>true</Enabled> <!-- Enable the task by default -->
+    <Enabled>true</Enabled>
     <Hidden>false</Hidden>
     <RunOnlyIfIdle>false</RunOnlyIfIdle>
     <DisallowStartOnRemoteAppSession>false</DisallowStartOnRemoteAppSession>
