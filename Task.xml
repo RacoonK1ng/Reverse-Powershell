@@ -3,13 +3,12 @@
   <RegistrationInfo>
     <Date>2025-01-19T09:44:55.343218</Date>
     <Author>HIM</Author>
-    <URI>\Task</URI>
+    <URI>\SYSTEMexecutionWindowsbullshit</URI>
   </RegistrationInfo>
   <Triggers>
     <SessionStateChangeTrigger>
       <Repetition>
         <Interval>PT4M</Interval>
-        <Duration>P1D</Duration>
         <StopAtDurationEnd>false</StopAtDurationEnd>
       </Repetition>
       <Enabled>true</Enabled>
